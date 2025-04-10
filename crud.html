@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestionar Favoritos</title>
+</head>
+<body>
+    <h1>Gestionar Mis Gatitos Favoritos</h1>
+
+    <div id="lista-favoritos">
+        </div>
+
+    <h2>Comparar Temperamentos</h2>
+    <div id="comparacion-container">
+        <select id="gato1-comparacion">
+            <option value="">Selecciona el primer gato</option>
+        </select>
+        <select id="gato2-comparacion">
+            <option value="">Selecciona el segundo gato</option>
+        </select>
+        <button onclick="compararTemperamentos()">Comparar</button>
+        <div id="resultado-comparacion"></div>
+    </div>
+
+    <button onclick="window.location.href='index.html'">Volver a la página principal</button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

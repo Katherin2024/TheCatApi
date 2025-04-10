@@ -1,0 +1,535 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f3e5f5; /* Lila pastel */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #d37ae2; /* Lila suave */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#inicio-container,
+#gatos-container,
+#favoritos-container,
+#registro-container,
+#busqueda-container,
+#resultados-busqueda {
+    background-color: #fff; /* Blanco para contraste */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #d180f1; /* Lila más suave */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos para la sección de inicio */
+#inicio-container p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#inicio-container h3 {
+    color: #f48fb1; /* Rosa pastel suave */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#inicio-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilos para la visualización de gatos */
+.gato-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.gato-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gato-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.gato-info h4 {
+    margin-top: 0;
+    color: #9c27b0; /* Lila suave */
+}
+
+.favorito-button {
+    background-color: #f48fb1; /* Rosa pastel para añadir */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favorito-button:hover {
+    background-color: #f06292; /* Rosa un poco más fuerte */
+}
+
+/* Estilos para la sección de favoritos */
+.favorito-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    align-items: center;
+    padding: 10px;
+}
+
+.favorito-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.favorito-info {
+    flex-grow: 1;
+}
+
+.favorito-info h4 {
+    margin-top: 0;
+    color: #9c27b0; /* Lila suave */
+}
+
+.eliminar-favorito {
+    background-color: #f06292; /* Rosa pastel para eliminar */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-favorito:hover {
+    background-color: #ec407a; /* Rosa más fuerte */
+}
+
+/* Estilos para la sección de búsqueda */
+#busqueda-container > div {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#busqueda-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #c04ad470; /* Lila suave */
+}
+
+#seleccion-raza {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#busqueda-container button {
+    background-color: #f48fb1; /* Rosa pastel para buscar */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#busqueda-container button:hover {
+    background-color: #f06292;
+}
+
+#resultados-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.resultado-imagen {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para la sección de registro */
+#registro-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#registro-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #040305; /* Lila suave */
+}
+
+#registro-container input[type="text"],
+#registro-container input[type="email"],
+#registro-container input[type="tel"],
+#registro-container input[type="date"],
+#registro-container input[type="password"],
+#registro-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#registro-container button[type="submit"] {
+    background-color: #f48fb1; /* Rosa pastel para registrar */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registro-container button[type="submit"]:hover {
+    background-color: #f06292;
+}
+
+/* Estilos para mensajes */
+.mensaje {
+    color: green;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Barra de navegación inferior */
+.bottom-nav {
+    background-color: #9444df6c; /* Lila suave */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.bottom-nav button {
+    background: none;
+    color: rgb(20, 19, 19);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav button:hover {
+    color: #807176; /* Rosa pastel */
+}
+
+.bottom-nav span[aria-hidden="true"] {
+    margin-right: 5px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .bottom-nav {
+        flex-direction: row; /* Vuelve a ser horizontal en pantallas pequeñas */
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .bottom-nav button {
+        padding: 8px;
+        font-size: 14px;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .bottom-nav span[aria-hidden="true"] {
+        margin-right: 2px;
+    }
+
+    .gato-card {
+        flex-direction: column;
+    }
+
+    .favorito-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .favorito-card img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #resultados-busqueda {
+        justify-content: center;
+    }
+
+    .resultado-imagen {
+        width: 120px;
+        height: 120px;
+    }
+
+    #registro-container form {
+        padding: 15px;
+    }
+
+    #registro-container input[type="text"],
+    #registro-container input[type="email"],
+    #registro-container input[type="tel"],
+    #registro-container input[type="date"],
+    #registro-container input[type="password"],
+    #registro-container select {
+        font-size: 14px;
+    }
+
+    #registro-container button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
+ /* style.css (Añade o modifica estas reglas) */
+
+/* Estilos generales para la página de gestión de favoritos */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color:  #f06292; /* Un tono de azul */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la lista de favoritos */
+#lista-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para cada tarjeta de favorito en la página CRUD */
+.favorito-card-crud {
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.favorito-card-crud img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.favorito-info-crud {
+    flex-grow: 1;
+}
+
+.favorito-info-crud h4 {
+    margin-top: 0;
+    color: #22221f; /* Otro tono de azul */
+}
+
+.favorito-info-crud p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.favorito-card-crud button {
+    background-color: #f44336; /* Rojo para eliminar */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.favorito-card-crud button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos para la sección de comparación */
+#comparacion-container {
+    background-color: #a9ffff77; /* Un tono claro de cian */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #111414;
+}
+
+#comparacion-container h2 {
+    color: #0097a7; /* Un tono de cian más oscuro */
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#comparacion-container select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #2e2828;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#comparacion-container button {
+    background-color: #ac26ac; /* Verde para comparar */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#comparacion-container button:hover {
+    background-color: #388e3c;
+}
+
+#resultado-comparacion {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+#resultado-comparacion h3 {
+    color: #f362cf;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#resultado-comparacion p {
+    margin-bottom: 8px;
+}
+
+/* Botón para volver a la página principal */
+button {
+    background-color: #ca57d4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #f597e896;
+}
+
+/* Estilos adicionales que podrían ser útiles */
+.favorito-info-crud button {
+    margin-top: 10px;
+}
+
+
+ 

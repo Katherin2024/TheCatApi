@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gatitos</title>
+</head>
+<body onload="mostrarinicio()">
+    <h1>Gatitos</h1>
+    <main id="app">
+        <div id="inicio-container">
+            </div>
+        <div id="gatos-container">
+            </div>
+        <div id="favoritos-container" style="display: none;">
+            <h2>Mis Favoritos</h2>
+            </div>
+        <div id="registro-container" style="display: none;">
+            <h2>Registro</h2>
+            </div>
+        <div id="busqueda-container" style="display: none;">
+            <h2>Buscar Gatos</h2>
+            <div>
+                <label for="seleccion-raza">Buscar por Raza:</label>
+                <select id="seleccion-raza">
+                    <option value="">Selecciona una raza</option>
+                    </select>
+                <button onclick="buscarPorRazaSeleccionada()">Buscar</button>
+            </div>
+            <div id="resultados-busqueda">
+            </div>
+                
+        </div>
+        
+    </main>
+    <nav class="bottom-nav">
+        <button onclick="mostrarinicio()"><span aria-hidden="true">🐾🐾</span> Inicio</button>
+        <button onclick="mostrarrazas()"><span aria-hidden="true">🐱 🐈 </span> Gatos</button>
+        <button onclick="mostrarbusqueda()"><span aria-hidden="true">🔍</span> Busqueda </button>
+        <button onclick="mostrarfavoritos()"><span aria-hidden="true">💖</span> Favoritos</button>
+        <button onclick="mostrarregistro()"><span aria-hidden="true">✍️</span> Registro</button>
+        <button onclick="window.location.href='crud.html'"><span aria-hidden="true">⚙️</span> Gestionar Favoritos</button>
+    </nav>
+
+    <script src="js/Inicio.js"></script>
+    <script src="js/razas.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/busqueda.js"></script>
+
+</body>
+</html>
