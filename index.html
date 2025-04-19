@@ -11,34 +11,60 @@
     <h1>Gatitos</h1>
     <main id="app">
         <div id="inicio-container">
+            <h2>¡Bienvenido a Gatitos!</h2>
+            <p>Explora adorables gatos, conoce sus razas y añádelos a tus favoritos. 🐾</p>
+
+            <button id="mostrar-populares-inicio">Ver Razas Populares ⭐</button>
+
+            <div id="populares-container" style="display: none; margin-top: 20px;">
+                <h3>Las 6 Razas de Gatos Más Populares</h3>
+                <ul id="popularBreeds"></ul>
             </div>
+
+            <h3>🐱 Datos Curiosos sobre los Gatitos</h3>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Los gatos duermen entre 13 y 16 horas al día. ¡Son verdaderos maestros de la siesta!</li>
+                <li>Existen más de 70 razas de gatos reconocidas en todo el mundo.</li>
+                <li>Un gato puede correr hasta 48 km/h en distancias cortas.</li>
+                <li>Los bigotes de los gatos les ayudan a medir si pueden pasar por espacios estrechos.</li>
+                <li>Los gatos "amasan" con sus patas cuando están felices o recuerdan la lactancia de cachorros.</li>
+                <li>El ronroneo de un gato no solo expresa felicidad, también puede ayudarles a sanar.</li>
+            </ul>
+
+            <p>¡Disfruta descubriendo y aprendiendo sobre estos maravillosos compañeros peludos! 😺</p>
+        </div>
         <div id="gatos-container">
-            </div>
+        </div>
         <div id="favoritos-container" style="display: none;">
             <h2>Mis Favoritos</h2>
-            </div>
+        </div>
         <div id="registro-container" style="display: none;">
             <h2>Registro</h2>
-            </div>
+        </div>
         <div id="busqueda-container" style="display: none;">
             <h2>Buscar Gatos</h2>
             <div>
                 <label for="seleccion-raza">Buscar por Raza:</label>
                 <select id="seleccion-raza">
                     <option value="">Selecciona una raza</option>
-                    </select>
+                </select>
                 <button onclick="buscarPorRazaSeleccionada()">Buscar</button>
             </div>
             <div id="resultados-busqueda">
             </div>
-                
         </div>
-        
+        <div id="breed-info-container" style="display: none;">
+            <h1>Información de la Raza</h1>
+            <div id="breed-details">
+                <p>Cargando información...</p>
+            </div>
+            <button onclick="document.getElementById('breed-info-container').style.display = 'none'; document.getElementById('inicio-container').style.display = 'block';">Cerrar</button>
+        </div>
     </main>
     <nav class="bottom-nav">
         <button onclick="mostrarinicio()"><span aria-hidden="true">🐾🐾</span> Inicio</button>
         <button onclick="mostrarrazas()"><span aria-hidden="true">🐱 🐈 </span> Gatos</button>
-        <button onclick="mostrarbusqueda()"><span aria-hidden="true">🔍</span> Busqueda </button>
+        <button onclick="mostrarbusqueda()"><span aria-hidden="true">🔍</span> Filtro </button>
         <button onclick="mostrarfavoritos()"><span aria-hidden="true">💖</span> Favoritos</button>
         <button onclick="mostrarregistro()"><span aria-hidden="true">✍️</span> Registro</button>
         <button onclick="window.location.href='crud.html'"><span aria-hidden="true">⚙️</span> Gestionar Favoritos</button>
@@ -49,8 +75,11 @@
     <script src="js/favoritos.js"></script>
     <script src="js/registro.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/busqueda.js"></script>
+    <script src="js/populares.js"></script>
     <script src="https://katherin2024.github.io/TheCatApi/js/app.js"></script>
 
 </body>
+<footer>
+            Realizado por: Heidy Katherin Aviles Pinzón
+</footer>
 </html>

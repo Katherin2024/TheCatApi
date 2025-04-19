@@ -6,7 +6,6 @@ const gato1ComparacionSelect = document.getElementById('gato1-comparacion');
 const gato2ComparacionSelect = document.getElementById('gato2-comparacion');
 const resultadoComparacionDiv = document.getElementById('resultado-comparacion');
 
-let favoritos = [];
 
 // Función para cargar los favoritos desde el almacenamiento local
 function cargarFavoritos() {
