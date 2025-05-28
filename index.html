@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://katherin2024.github.io/TheCatApi/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff9800">
     <title>Gatitos</title>
 </head>
 <body onload="mostrarinicio()">
@@ -77,6 +79,13 @@
     <script src="js/script.js"></script>
     <script src="js/populares.js"></script>
     <script src="https://katherin2024.github.io/TheCatApi/js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker registrado'))
+                .catch(err => console.error('Error registrando SW:', err));
+            }
+    </script>
 
 </body>
 <footer>
